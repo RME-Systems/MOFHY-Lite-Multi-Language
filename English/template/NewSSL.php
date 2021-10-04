@@ -33,8 +33,8 @@
 				</div>
 				<div class="col-md-12">
 					<div class="mb-10 px-10">
-						<label class="form-label required">CSR Code</label>
-						<textarea name="csr" style="height: 250px" placeholder="Enter CSR Code..." class="form-control" required></textarea> 
+						<label class="form-label required">Domain</label>
+						<input type="text" name="domain" placeholder="Enter Domain..." class="form-control" required>
 					</div>
 				</div>
 				<div class="col-md-12">

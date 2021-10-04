@@ -35,9 +35,23 @@ if(isset($_POST['submit'])){
 	else{
 		$Postal = $ClientInfo['hosting_client_pcode'];
 	}
+	$CSRData = array(
+    'csr_commonname' => $_POST['domain'],
+    'csr_organization' => $Company,
+    'csr_department' => 'IT',
+    'csr_city' => $City,
+    'csr_state' => $City,
+    'csr_country' => $Country,
+    'csr_email' => $ClientInfo['hosting_client_email']
+    );
+    $apiClient = new GoGetSSLApi();
+    $token = $apiClient->auth($SSLApi['api_username'], $SSLApi['api_password']);
+    $csrorder = $apiClient->generateCSR($CSRData);
+    $csr_code = $csrorder['csr_code'];
+    $private_key = $csrorder['csr_key'];
 	$FormData = array(
 		'product_id'       => 65,
-		'csr' 			   => $_POST['csr'],
+		'csr' 			   => $csr_code,
 	    'server_count'     => "-1",
 	    'period'           => 3,
 	    'approver_email'   => 'mahtabhassan159@gmail.com',
@@ -68,7 +82,7 @@ if(isset($_POST['submit'])){
 	$token = $apiClient->auth($SSLApi['api_username'], $SSLApi['api_password']);
 	$Data = $apiClient->addSSLOrder($FormData);
 	if(count($Data)>4){
-		$sql = mysqli_query($connect,"INSERT INTO `hosting_ssl`(`ssl_key`,`ssl_for`) VALUES ('".$Data['order_id']."','".$ClientInfo['hosting_client_key']."')");
+		$sql = mysqli_query($connect,"INSERT INTO `hosting_ssl`(`ssl_key`,`ssl_for`,`private_key`) VALUES ('".$Data['order_id']."','".$ClientInfo['hosting_client_key']."','".$private_key."')");
 		if($sql){
 			$SSL = $AreaInfo['area_url'].'viewssl.php?ssl_id='.$FormData['order_id'];
 			$EmailTo = [['email' => $FormData['email']],['email' => $AreaInfo['area_email']]];

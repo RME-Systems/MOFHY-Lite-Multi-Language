@@ -8,6 +8,7 @@
 			$apiClient = new GoGetSSLApi();
 			$token = $apiClient->auth($SSLApi['api_username'], $SSLApi['api_password']);
 			$SSLInfo = $apiClient->getOrderStatus($_GET['ssl_id']);
+			$get_sql=mysqli_fetch_assoc($sql);
 			if($SSLInfo['status']=='processing'){
 				$Status = '<span class="badge bg-primary">Processing</span>';
 			} elseif($SSLInfo['status']=='active'){
@@ -65,6 +66,10 @@
 					<b>CSR Code:</b>
 					<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $SSLInfo['csr_code'];?></textarea></pre>
 				</div>
+				<div class="my-5 mx-10">
+                			<b>Private Key:</b>
+                			<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $get_sql['private_key'];?></textarea></pre>
+             			</div>
 				<div class="my-10 mx-10">
 					<b>CNAME Record:</b>
 					<pre class="my-0"><input type="text" class="form-control" value="<?php echo $Record['0'];?>" readonly></pre>
@@ -76,6 +81,14 @@
 			</div>
 			<?php } elseif($SSLInfo['status']=='active'){ ?>
 			<div class="col-lg-12">
+				<div class="my-5 mx-10">
+					<b>CSR Code:</b>
+					<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $SSLInfo['csr_code'];?></textarea></pre>
+				</div>
+				<div class="my-5 mx-10">
+                			<b>Private Key:</b>
+                			<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $get_sql['private_key'];?></textarea></pre>
+             			</div>
 				<div class="my-5 mx-10">
 					<b>Certificate Code:</b>
 					<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $SSLInfo['crt_code'];?></textarea></pre>
@@ -93,6 +106,10 @@
 					<b>CSR Code:</b>
 					<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $SSLInfo['csr_code'];?></textarea></pre>
 				</div>
+				<div class="my-5 mx-10">
+                			<b>Private Key:</b>
+                			<pre class="my-0"><textarea class="form-control" style="height: 250px" readonly><?php echo $get_sql['private_key'];?></textarea></pre>
+             			</div>
 			</div>
 			<?php } elseif($SSLInfo['status']=='expired'){ ?>
 			<div class="col-lg-12">
