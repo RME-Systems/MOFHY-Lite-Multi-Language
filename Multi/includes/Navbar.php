@@ -1,4 +1,4 @@
-	<div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="overlayed-sm-and-down">
+<div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="overlayed-sm-and-down">
       <nav class="navbar">
         <div class="container-fluid">
         	<a href="<?php echo $AreaInfo['area_url'];?>index.php" class="navbar-brand"><?php echo $AreaInfo['area_name'];?></a>
@@ -9,7 +9,9 @@
 		      </a>
 		      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
 		        <a href="?lang=en" class="dropdown-item">English</a>
-		        <a href="?lang=es" class="dropdown-item">Español</a>
+		        <a href="?lang=es" class="dropdown-item">Espa&ntildeol</a>
+		        <a href="?lang=fr" class="dropdown-item">Fran&ccedilais</a>
+		        <a href="?lang=ch" class="dropdown-item">&#20013&#25991</a>
 		      </div>
 		    </li>
 		    <li class="nav-item nav-height dropdown with-arrow">
