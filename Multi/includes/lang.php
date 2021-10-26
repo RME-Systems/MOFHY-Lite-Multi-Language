@@ -2,7 +2,9 @@
     $lang = "en";
     $allowedlangs = array(
         "es",
-        "en"
+        "en",
+        "fr",
+        "ch"
     );
     if (!empty($_GET["lang"])) {
         $rlang = $_GET["lang"];
@@ -15,7 +17,9 @@
     }
     $langmaps = array(
         "en" => "langs/en.json",
-        "es" => "langs/es.json"
+        "es" => "langs/es.json",
+        "fr" => "langs/fr.json",
+        "ch" => "langs/ch.json"
     );
     $text = json_decode(file_get_contents($langmaps[$lang]), true);
 ?>
