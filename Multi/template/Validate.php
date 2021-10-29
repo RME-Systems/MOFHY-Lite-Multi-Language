@@ -55,7 +55,7 @@
       						<input type="text" name="validation_key" class="form-control" placeholder="eg. Abdu6236734h...">
       					</div>
       					<div class="form-group">
-      						<button name="validate" class="btn btn-sm btn-primary">Validar</button>
+      						<button name="validate" class="btn btn-sm btn-primary"><?php echo $text['validate'];?></button>
       						<a href="resendemail.php" class="btn btn-sm btn-secondary"><?php echo $text['resend'];?></a>
       					</div>
       				</form>
