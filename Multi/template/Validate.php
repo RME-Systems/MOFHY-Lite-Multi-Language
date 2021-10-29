@@ -48,7 +48,7 @@
       		<div class="card p-15">
       			<h5 class="mb-0 px-5"><?php echo $text['validate'];?></h5><hr>
       			<div>
-      				<p><?php echo $text['validate_text'];?></p>
+      				<p><?php echo $text['validation_text'];?></p>
       				<form action="function/Validate.php" method="post">
       					<div class="form-group">
       						<label class="form-label"><?php echo $text['validation_key'];?></label>
