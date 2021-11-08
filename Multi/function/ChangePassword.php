@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
 			exit;
 		}
 		elseif($Result['status']==1 && strlen($Result['message'])>1){
-			$sql = mysqli_query($connect,"UPDATE `hosting_account` SET `account_password`='".$Result['password']."' WHERE `account_username`='".$FormData['account_username']."'");
+			$sql = mysqli_query($connect,"UPDATE `hosting_account` SET `account_password`='".$Result['password']."' WHERE `account_username`='".$Result['username']."'");
 			if($sql){
 				$_SESSION['message'] = '<div class="alert alert-success" role="alert">
 										  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
