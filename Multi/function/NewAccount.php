@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 						<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
 						<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 						<h2 style='text-align:center;color:skyblue;'><b>New Account</b></h2><hr>
-						<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>You have successfully created a new hosting account the details are given bellow.</p><br>
+						<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>Congratulations! You have successfully created a new free hosting account. More details are given below:</p><br>
 						<b>cPanel Username: </b><span>".$Result['username']."</span><br>
 						<b>cPanel Password: </b><span>".$FormData['password']."</span><br>
 						<b>Main Domain: </b><span>".$Result['domain']."</span><br>
@@ -72,14 +72,14 @@ if(isset($_POST['submit'])){
 						<b>Nameserver 1: </b><span>".API_NS_1."</span><br>
 						<b>Nameserver 2: </b><span>".API_NS_2."</span>
 						<br>
-						<p>After login to your account you can use any service ❤</p>
-						<p>Regards ".$AreaInfo['area_name']."</p>
+						<p>Next, login to your account and you can use any service ❤!</p>
+						<p>Regards,<br> </b>".$AreaInfo['area_name']."</b>.</p>
 						<hr>
 						<h4 style='text-align:center;'><b>Need our help?</b></h4><p style='text-align:center'><a href='".$AreaInfo['area_url']."newticket.php' style='color:skyblue;text-decoration:none;margin:0;'>We are here to help you out!</a></p>
 						</div>
 						</div>";
 					$Email = array(
-						'subject' => 'New Account',
+						'subject' => 'New Hosting Account',
 						'body' => $Body
 					);
 					include __DIR__.'/../handler/EmailHandler.php';
