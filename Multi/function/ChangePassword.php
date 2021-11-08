@@ -23,6 +23,7 @@ if(isset($_POST['submit'])){
 		$Result = array(
 			'status' => $Data['passwd']['status'],
 			'message' => $Data['passwd']['statusmsg'],
+			'username' => $FormData['account_username'], 
 			'password' => $FormData['new_password']
 		);
 		if($Result['status']==0 && strlen($Result['message'])>1){
