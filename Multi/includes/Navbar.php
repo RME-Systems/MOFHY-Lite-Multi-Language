@@ -12,6 +12,7 @@
 		        <a href="?lang=es" class="dropdown-item">Espa&ntildeol</a>
 		        <a href="?lang=fr" class="dropdown-item">Fran&ccedilais</a>
 		        <a href="?lang=ch" class="dropdown-item">&#20013&#25991</a>
+			<a href="?lang=tr" class="dropdown-item">Türkçe</a>
 		      </div>
 		    </li>
 		    <li class="nav-item nav-height dropdown with-arrow">
