@@ -4,7 +4,8 @@
         "es",
         "en",
         "fr",
-        "ch"
+        "ch",
+	"tr"
     );
     if (!empty($_GET["lang"])) {
         $rlang = $_GET["lang"];
@@ -19,7 +20,8 @@
         "en" => "langs/en.json",
         "es" => "langs/es.json",
         "fr" => "langs/fr.json",
-        "ch" => "langs/ch.json"
+        "ch" => "langs/ch.json",
+	"tr" => "langs/tr.json"
     );
     $text = json_decode(file_get_contents($langmaps[$lang]), true);
 ?>
