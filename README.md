@@ -60,7 +60,7 @@ The following libraries are required to run MOFHY Lite:
  - gogetssl
 ## Contributer
 The core is created by [Mahtab Hassan](https://github.com/mahtab2003)
-And the Multi Lang System and translations by [Santy Designs](https://github.com/santydesignscr)
+And the Multi Lang System and translations by [Santy Designs](https://github.com/santydesignscr) with the contributions of @ImLoadingUuU and @OverdueWeevil2
 ## Copyright
 Code Copyright 2021 MOFHY Lite. Code released under the MIT license.
 
