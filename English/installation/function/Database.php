@@ -4,6 +4,7 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_account` (
   `account_username` VARCHAR(22) NOT NULL,
   `account_password` VARCHAR(16) NOT NULL,
   `account_domain` VARCHAR(70) NOT NULL,
+  `account_sql` VARCHAR(8) NOT NULL, 
   `account_key` VARCHAR(8) NOT NULL,
   `account_status` INT(1) NOT NULL,
   `account_date` VARCHAR(20) NOT NULL,
@@ -63,7 +64,8 @@ $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_smtp` (
 $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_ssl` (
   `ssl_id` INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `ssl_key` INT(12) NOT NULL,
-  `ssl_for` INT(6) NOT NULL
+  `ssl_for` INT(6) NOT NULL,
+	`private_key` TEXT NOT NULL
 )');
 
 $sql = mysqli_query($connect,'CREATE TABLE IF NOT EXISTS `hosting_ssl_api` (

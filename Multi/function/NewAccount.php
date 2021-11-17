@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 		header('location: ../newaccount.php');
 	}
 	else{
-		$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."' AND `account_status`='1'");
+		$sql = mysqli_query($connect,"SELECT * FROM `hosting_account` WHERE `account_for`='".$ClientInfo['hosting_client_key']."'");
 		if(mysqli_num_rows($sql)<3){
 			$client = Client::create();
 			$request = $client->createAccount([
@@ -57,18 +57,18 @@ if(isset($_POST['submit'])){
 					$EmailTo = [['email' => $FormData['email']]];
 					$Body = "
 						<div class='container' style='margin-left:5%;margin-right:5%;margin-top:5%;'>
-						<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
+						<div style='border-radius:1px solid grey;border-radius:5px;box-shadow:1px 1px 5px grey;padding:20px;font-family: Arial, Helvetica, sans-serif;'>
 						<h2 style='text-align:center;color:skyblue;'><b>New Account</b></h2><hr>
 						<h3>Hi ".$ClientInfo['hosting_client_fname'].",</h3><p>Congratulations! You have successfully created a new free hosting account. More details are given below:</p><br>
 						<b>cPanel Username: </b><span>".$Result['username']."</span><br>
 						<b>cPanel Password: </b><span>".$FormData['password']."</span><br>
 						<b>Main Domain: </b><span>".$Result['domain']."</span><br>
 						<b>Account Date: </b><span>".$Result['date']."</span><br>
-						<b>cPanel URL:</b><span>".API_CPANEL_URL."</span><br>
-						<b>Server IP:</b><span>".API_SERVER_IP."</span><br>
-						<b>Hosting Package:</b><span>".API_PLAN."</span><br>
-						<b>FTP Hostname:</b><span>ftpupload.net</span><br>
-						<b>MySQL Hostname:</b><span>".str_replace('cpanel', 'sqlxxx', API_CPANEL_URL)."</span><br>
+						<b>cPanel URL: </b><span>".API_CPANEL_URL."</span><br>
+						<b>Server IP: </b><span>".API_SERVER_IP."</span><br>
+						<b>Hosting Package: </b><span>".API_PLAN."</span><br>
+						<b>FTP Hostname: </b><span>ftpupload.net</span><br>
+						<b>MySQL Hostname: </b><span>".str_replace('cpanel', 'sqlxxx', API_CPANEL_URL)."</span><br>
 						<b>Nameserver 1: </b><span>".API_NS_1."</span><br>
 						<b>Nameserver 2: </b><span>".API_NS_2."</span>
 						<br>
@@ -87,7 +87,7 @@ if(isset($_POST['submit'])){
 											  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
 											    <span aria-hidden="true">&times;</span>
 											  </button>
-											  Account created <b>successfully!</b>
+											  Account created <b>successfully</b>!
 											</div>';
 					header('location: ../myaccounts.php');
 					exit;
