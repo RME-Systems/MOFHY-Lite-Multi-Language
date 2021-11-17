@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
 	}
 
 	if($ClientInfo['hosting_client_pcode']=='NULL'){
-		$Postal = '30101;
+		$Postal = '30101';
 	}
 	else{
 		$Postal = $ClientInfo['hosting_client_pcode'];
@@ -117,7 +117,7 @@ if(isset($_POST['submit'])){
 										  <button class="close" data-dismiss="alert" type="button" aria-label="Close">
 										    <span aria-hidden="true">&times;</span>
 										  </button>
-										  Something wemt'."'".' <b>weong!</b>
+										  Something went'."'".' <b>wrong!</b>
 										</div>';
 			header('location: ../newssl.php');
 		}
