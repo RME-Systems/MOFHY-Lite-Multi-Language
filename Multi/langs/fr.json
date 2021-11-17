@@ -130,7 +130,7 @@
     "suspended_title": "Désolé.",
     "suspended_subtitle": "Compte suspendu",
     "suspended_text": "Votre compte a été suspendu pour utilisation excessive des ressources ou abus du service. Veuillez contacter l'administrateur du service pour connaître la raison de la suspension du compte.",
-    "validation_text": "<b>Note:</b> Vous devez valider ce compte afin d'utiliser nos services d'hébergement ou de ssl gratuits. Un courriel a été envoyé à votre adresse électronique (<?php echo '<samp>'.$ClientInfo['hosting_client_email'].'</samp>';?>) avec la clé de validation.",
+    "validation_text": "<b>Note:</b> Vous devez valider ce compte afin d'utiliser nos services d'hébergement ou de ssl gratuits. Un courriel a été envoyé à votre adresse électronique avec la clé de validation.",
     "validation_key": "Clé de validation",
     "validate": "Valider",
     "resend": "Transférer le courriel",

@@ -130,7 +130,7 @@
    "suspended_title":"对不起!",
    "suspended_subtitle":"被暂停的账户",
    "suspended_text":"您的账户因过度使用资源或滥用服务而被暂停，请联系服务管理员，了解账户暂停的原因。",
-   "validation_text":"注意：你需要验证这个账户，以便使用我们的免费主机或ssl服务。一封带有验证码的电子邮件已经发送到您的邮箱（'.$ClientInfo['hosting_client_email'].'';?>）。",
+   "validation_text":"注意：你需要验证这个账户，以便使用我们的免费主机或ssl服务。一封带有验证码的电子邮件已经发送到您的邮箱。",
    "validation_key":"验证码",
    "validate":"验证",
    "resend":"转发电子邮件",

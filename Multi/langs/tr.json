@@ -130,7 +130,7 @@
    "suspended_title":"Özür dilerim!",
    "suspended_subtitle":"Hesap askıya alındı",
    "suspended_text":"Kaynak kullanımı veya hizmetin kötüye kullanılması nedeniyle hesabınız askıya alındı, hesabın askıya alınma nedenini öğrenmek için lütfen hizmet yöneticisine başvurun.",
-   "validation_text":"<b>Not:<\/b> Ücretsiz barındırma veya ssl hizmetlerimizi kullanmak için bu hesabı doğrulamanız gerekir. Doğrulama anahtarıyla birlikte e-posta adresinize bir e-posta gönderildi. (<?php echo '<samp>'. $ClientInfo ['hosting_client_email']. '<\/samp>'; ?>)",
+   "validation_text":"<b>Not:<\/b> Ücretsiz barındırma veya ssl hizmetlerimizi kullanmak için bu hesabı doğrulamanız gerekir. Doğrulama anahtarıyla birlikte e-posta adresinize bir e-posta gönderildi.",
    "validation_key":"Doğrulama Anahtarı",
    "validate":"Doğrula",
    "resend":"E-postayı ilet",
