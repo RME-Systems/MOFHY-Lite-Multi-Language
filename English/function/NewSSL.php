@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
 	}
 
 	if($ClientInfo['hosting_client_pcode']=='NULL'){
-		$Postal = '30101;
+		$Postal = '30101';
 	}
 	else{
 		$Postal = $ClientInfo['hosting_client_pcode'];
